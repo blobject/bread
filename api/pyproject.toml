@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bread"
+version = "0.0.1"
+description = ""
+authors = ["blobject <agaric@pm.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.3.2"
+flask-cors = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

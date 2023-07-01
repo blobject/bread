@@ -1,0 +1,23 @@
+* bread
+
+*bread* is a day-schedule organiser and visualiser for the browser.
+
+Status: pre-alpha
+
+** use it
+
+/wip/
+
+** run it locally
+
+/wip/
+
+** todo
+
+- define schedule data format
+- design architecture, page, logic
+- integrate html canvas
+- integrate wall clock
+- implement schedule import, export
+- implement theme selection
+
