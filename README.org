@@ -10,7 +10,10 @@ Status: pre-alpha
 
 ** run it locally
 
-/wip/
+1. clone
+2. cd bread/bread
+3. npm install
+4. npm run start
 
 ** todo
 
@@ -20,4 +23,66 @@ Status: pre-alpha
 - integrate wall clock
 - implement schedule import, export
 - implement theme selection
+
+*** bread data
+
+#+BEGIN_SRC
+<> = type
+[] = list
+() = optional
+ . = and
+ | = or
+ ~ = same as or similar to
+
+- [pie]: baker . creationtime . lastmodtime . timezone . [task]
+  - baker: <email>
+  - creationtime: <time>
+  - lastmodtime: <time>
+  - timezone: <string>
+  - [task]: title . description . priority . [moment] . [slice]
+    - title: <string>
+    - description: <string>
+    - priority: <integer>
+    - [moment]: <option> single | regular | multiple
+      - single: day . month . year
+        - day: <int>
+        - month: <int>
+        - year: <int>
+      - regular: [interval]
+        - interval: <int> ~ "day"
+      - multiple: [day . month . year]
+        - ~ "single"
+    - [slice]: start time . (end time)
+      - time: hour . minute . second . subsecond
+        - hour: <int>
+        - minute: <int>
+        - second: <int>
+        - subsecond: <int>
+#+END_SRC
+
+*** page concept
+
+- show date, pie, clock, input, options
+- big pie for the day, containing tasks
+  - hover, click to see and manage task details
+  - a way to see pie details
+  - a way to highlight (what and why?)
+- input area to bake in a new task
+- juxtapose clock and pie
+  - also show digital clock
+- a way to scroll through pies
+  - (how to decide on overlap? maybe single pie, not list of)
+- a way to scroll through days
+  - calendar, spinner
+- a way to track elapsion
+- options for:
+  - baker
+  - timezone
+  - interface theme
+  - data import, export
+
+nice to have:
+- synchronise with standard clock
+- plugin other services
+- notifications
 
